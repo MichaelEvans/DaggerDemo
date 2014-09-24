@@ -1,0 +1,42 @@
+/*
+ * Copyright 2014 Michael Evans
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package org.michaelevans.daggerdemo.api;
+
+import org.michaelevans.daggerdemo.ApplicationModule;
+import org.michaelevans.daggerdemo.annotations.WundergroundApiKey;
+import org.michaelevans.daggerdemo.test.ui.MainActivityTest;
+import org.michaelevans.daggerdemo.ui.MainActivity;
+
+import javax.inject.Singleton;
+
+import dagger.Module;
+import dagger.Provides;
+
+/**
+ * Created by michael on 9/23/14.
+ */
+@Module(
+        overrides = true,
+        library = true
+)
+public class MockApiModule {
+    @Provides
+    @Singleton
+    WundergroundService provideService() {
+        return new MockWundergroundService();
+    }
+}
