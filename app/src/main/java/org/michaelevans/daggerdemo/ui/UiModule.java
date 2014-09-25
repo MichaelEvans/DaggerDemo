@@ -16,13 +16,8 @@
 
 package org.michaelevans.daggerdemo.ui;
 
-import org.michaelevans.daggerdemo.ApplicationModule;
-
 import dagger.Module;
 
-/**
- * Created by michael on 9/23/14.
- */
 @Module(
         complete = false,
         library = true,

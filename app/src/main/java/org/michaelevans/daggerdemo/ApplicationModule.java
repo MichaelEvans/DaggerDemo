@@ -19,7 +19,6 @@ package org.michaelevans.daggerdemo;
 import android.content.Context;
 
 import org.michaelevans.daggerdemo.annotations.WundergroundApiKey;
-import org.michaelevans.daggerdemo.preferences.PreferencesModule;
 
 import javax.inject.Singleton;
 

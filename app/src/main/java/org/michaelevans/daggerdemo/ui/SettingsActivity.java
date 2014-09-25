@@ -18,9 +18,7 @@ package org.michaelevans.daggerdemo.ui;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.ListPreference;
-import android.preference.Preference;
 import android.preference.PreferenceActivity;
-import android.util.Log;
 
 import org.michaelevans.daggerdemo.DemoApplication;
 import org.michaelevans.daggerdemo.R;
@@ -30,9 +28,6 @@ import java.util.Arrays;
 
 import javax.inject.Inject;
 
-/**
- * Created by michael on 9/24/14.
- */
 public class SettingsActivity extends PreferenceActivity implements
         SharedPreferences.OnSharedPreferenceChangeListener {
 
