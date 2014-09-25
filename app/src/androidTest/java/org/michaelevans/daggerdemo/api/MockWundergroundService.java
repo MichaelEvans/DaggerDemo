@@ -31,13 +31,11 @@ import retrofit.http.Path;
 public class MockWundergroundService implements WundergroundService {
     @Override
     public void getWeatherData(@Path("apiKey") String apiKey, @Path("cityName") String cityName, Callback<WeatherData> callback) {
-        CurrentObservation currentObservation = new CurrentObservation();
+        CurrentObservation currentObservation;
         if (cityName.equals("Yosemite")) {
-            currentObservation.setTempF(55.5);
-            currentObservation.setTempC(13);
+            currentObservation = new CurrentObservation(55.5, 13);
         } else {
-            currentObservation.setTempF(73.5);
-            currentObservation.setTempC(23.9);
+            currentObservation = new CurrentObservation(73.5, 23.9);
         }
         WeatherData weatherData = new WeatherData(currentObservation);
         callback.success(weatherData, new Response("foo", 200, "nothing", Collections.EMPTY_LIST, null));

@@ -27,19 +27,16 @@ public class CurrentObservation {
     @SerializedName("temp_c")
     private double tempC;
 
+    public CurrentObservation(double tempF, double tempC) {
+        this.tempF = tempF;
+        this.tempC = tempC;
+    }
+
     public double getTempF() {
         return tempF;
     }
 
     public double getTempC() {
         return tempC;
-    }
-
-    public void setTempF(double f) {
-        tempF = f;
-    }
-
-    public void setTempC(double c) {
-        tempC = c;
     }
 }
