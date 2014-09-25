@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <!--
   ~ Copyright 2014 Michael Evans
   ~
@@ -15,24 +16,10 @@
   ~ limitations under the License.
   -->
 
-<resources>
-
-    <string name="app_name">Dagger Demo</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-
-    <string-array name="city_names">
-        <item>Select a city</item>
-        <item>Sacramento</item>
-        <item>Yosemite</item>
-    </string-array>
-
-    <string-array name="temperature_units">
-        <item>Fahrenheit</item>
-        <item>Celsius</item>
-    </string-array>
-    <string-array name="temperature_unit_values">
-        <item>FAHRENHEIT</item>
-        <item>CELSIUS</item>
-    </string-array>
-</resources>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:entries="@array/temperature_units"
+        android:entryValues="@array/temperature_units"
+        android:key="pref_unit"
+        android:title="Temperature Unit" />
+</PreferenceScreen>

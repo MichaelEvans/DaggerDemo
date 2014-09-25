@@ -53,12 +53,4 @@ public class DemoApplication extends Application {
     public void inject(Object object) {
         graph.inject(object);
     }
-
-    public void plus(Object object){
-        graph.plus(object);
-    }
-
-    public void setObjectGraph(ObjectGraph objectGraph) {
-        this.graph = objectGraph;
-    }
 }

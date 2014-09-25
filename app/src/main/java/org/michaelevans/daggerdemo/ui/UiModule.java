@@ -27,7 +27,8 @@ import dagger.Module;
         complete = false,
         library = true,
         injects = {
-                MainActivity.class
+                MainActivity.class,
+                SettingsActivity.class
         }
 )
 public class UiModule {
